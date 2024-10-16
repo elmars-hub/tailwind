@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="dashboard flex h-screen overflow-hidden">
+      <!-- SideBar -->
+      <div class="bg-white flex flex-col w-[296px] h-screen" id="sidebar">
+        <!-- Logo -->
+        <div
+          class="flex items-center gap-3 py-[36px] border-b-[0.5px] border-slate-50 px-5"
+        >
+          <button id="navbtn" class="">
+            <img src="images/menu.svg" alt="" />
+          </button>
+
+          <div class="flex items-center">
+            <img class="w-[47px] h-[47px]" src="images/logo.svg" alt="Logo" />
+            <span
+              class="font-extrabold font-aftika text-sageHeavyBlue text-[16px]"
+              >SageHub</span
+            >
+          </div>
+        </div>
+        <!-- SideBar Nav List -->
+        <div
+          class="h-full border-r-2 border-slate-300 px-5 font-aftika font-normal"
+        >
+          <ul class="flex flex-col gap-2 h-full py-2">
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/home.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Home</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/dashboard-square.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Dashboard</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/healtcare.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Aides</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/suit-02.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Clients</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/bubble-chat.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Messages</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/books-01.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Resources</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/wallet-02.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Sage Wallet</a>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:bg-sageLightBlue p-3 rounded-md duration-300"
+            >
+              <img src="images/customer-support.svg" alt="" />
+              <a class="text-[16px]" href="#home" class="">Sage Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content bg-white flex-1 h-full flex flex-col">
+        <div
+          class="py-[33px] w-full bg-white flex items-center border-b-2 border-gray-300 sticky top-0 justify-between px-5"
+        >
+          <div class="pl-4">
+            <h1
+              class="text-sageBlack text-[24px] regular font-bold font-aftika"
+            >
+              Welcome Back, Cole
+            </h1>
+            <p class="text-[12px] font-thin font-aftika text-sageLightGray">
+              Good to see you again, we gat your care on check!
+            </p>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div
+              class="bg-sageOffWhite relative flex items-center px-4 py-2 rounded-md"
+            >
+              <input
+                class="bg-sageOffWhite text-[16px] font-extralight font-aftika outline-none"
+                type="text"
+                placeholder="Search"
+              />
+              <img
+                class="absolute right-2 cursor-pointer"
+                src="images/search.svg"
+                alt=""
+              />
+            </div>
+
+            <button>
+              <img
+                class="cursor-pointer"
+                src="images/notification.svg"
+                alt=""
+              />
+            </button>
+
+            <div class="flex items-center gap-2">
+              <img class="cursor-pointer" src="images/Ellipse 31.svg" alt="" />
+              <div class="flex flex-col">
+                <span class="font-bold font-aftika text-[12px]"
+                  >Cole Palmer</span
+                >
+                <span class="text-sageLightGray text-[10px]">User</span>
+              </div>
+              <button>
+                <img
+                  class="ml-3 cursor-pointer"
+                  src="images/arrow-down.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-1 h-full">
+          <!-- Middle Content (Aides) -->
+          <div
+            class="bg-white w-[60%] overflow-auto no-scrollbar py-5 px-3 pl-5 border-r border-slate-300"
+          >
+            <div class="h-[200vh]">
+              <!-- Aides Header -->
+              <div class="flex justify-between items-center">
+                <h1 class="font-bold font-aftika text-[24px]">My Aides</h1>
+                <button class="p-2 px-4 bg-sageDarkBlue rounded-md">
+                  <a
+                    class="text-white font-thin text-[14px] font-aftika"
+                    href="#"
+                    >Post a Job</a
+                  >
+                </button>
+              </div>
+
+              <!-- Aides Profile -->
+              <div
+                class="bg-sageGray p-4 rounded-lg mt-2 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-5">
+                  <img
+                    class="h-[64px] w-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col gap-2">
+                    <span class="font-aftika font-semibold text-[16px]"
+                      >Peter Ladipoe</span
+                    >
+                    <a
+                      href="#"
+                      class="text-[12px] text-sageHighBlue font-extralight font-aftika"
+                      >Aide</a
+                    >
+                  </div>
+                </div>
+
+                <span class="font-aftika font-extralight text-[14px]"
+                  >Home Cleaning</span
+                >
+
+                <button>
+                  <img src="images/ant-design_message-filled.svg" alt="" />
+                </button>
+              </div>
+              <div
+                class="bg-sageGray p-4 rounded-lg mt-2 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-5">
+                  <img
+                    class="h-[64px] w-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col gap-2">
+                    <span class="font-aftika font-semibold text-[16px]"
+                      >Peter Ladipoe</span
+                    >
+                    <a
+                      href="#"
+                      class="text-[12px] text-sageHighBlue font-extralight font-aftika"
+                      >Aide</a
+                    >
+                  </div>
+                </div>
+
+                <span class="font-aftika font-extralight text-[14px]"
+                  >Home Cleaning</span
+                >
+
+                <button>
+                  <img src="images/ant-design_message-filled.svg" alt="" />
+                </button>
+              </div>
+              <div
+                class="bg-sageGray p-4 rounded-lg mt-2 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-5">
+                  <img
+                    class="h-[64px] w-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col gap-2">
+                    <span class="font-aftika font-semibold text-[16px]"
+                      >Peter Ladipoe</span
+                    >
+                    <a
+                      href="#"
+                      class="text-[12px] text-sageHighBlue font-extralight font-aftika"
+                      >Aide</a
+                    >
+                  </div>
+                </div>
+
+                <span class="font-aftika font-extralight text-[14px]"
+                  >Home Cleaning</span
+                >
+
+                <button>
+                  <img src="images/ant-design_message-filled.svg" alt="" />
+                </button>
+              </div>
+
+              <!-- Recommended Aides -->
+              <div>
+                <h3 class="font-aftika font-light py-2">Recommended Aides</h3>
+
+                <div class="flex items-center justify-between">
+                  <div
+                    class="py-3 px-6 rounded-md flex items-center justify-between gap-5 bg-sageLightBlue"
+                  >
+                    <span
+                      class="px-3 py-1 bg-white text-sageDarkBlue rounded-2xl cursor-pointer font-aftika font-light text-[14px]"
+                      >All</span
+                    >
+                    <span
+                      class="cursor-pointer font-aftika font-light text-[14px] text-sageLightGray"
+                      >Active</span
+                    >
+                    <span
+                      class="cursor-pointer font-aftika font-light text-[14px] text-sageLightGray"
+                      >Inactive</span
+                    >
+                  </div>
+
+                  <div
+                    class="bg-sageOffWhite relative flex items-center px-3 py-1 rounded-md"
+                  >
+                    <input
+                      class="bg-sageOffWhite text-[16px] font-aftika font-thin outline-none"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <img
+                      class="absolute right-2 cursor-pointer"
+                      src="images/search.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="grid gap-4 grid-cols-3 pr-3 mt-3">
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Ellipse 2.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageGreen text-[10px]"
+                      >Active</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Profile picture.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageRed text-[10px]"
+                      >Inactive</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Profile picture.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageGreen text-[10px]"
+                      >Active</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Ellipse 3.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageGreen text-[10px]"
+                      >Active</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Ellipse 2.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageRed text-[10px]"
+                      >Inactive</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                  <div
+                    class="py-3 px-2 bg-sageMidWhite flex flex-col gap-2 items-center rounded-lg"
+                  >
+                    <img
+                      class="w-[75px] h-[75px]"
+                      src="images/Ellipse 5.svg"
+                      alt=""
+                    />
+                    <span class="font-aftika text-sageGreen text-[10px]"
+                      >Active</span
+                    >
+                    <p
+                      class="font-aftika text[14px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img src="images/Frame 1000003644.svg" alt="" />
+                    <span
+                      class="font-aftika font-extralight text-[12px] text-sageLowBlue"
+                      >view profile</span
+                    >
+                    <span
+                      class="py-1 px-3 bg-sageMidBlack text-white font-extralight text-[7px] font-aftika rounded-md"
+                      >Home Cleaning</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagionation -->
+            </div>
+          </div>
+
+          <!-- Last Content (Aides) -->
+          <div
+            class="bg-white flex-1 overflow-auto no-scrollbar h-full py-5 pl-4 pr-9"
+          >
+            <div class="h-[200vh] w-full">
+              <div class="flex justify-between items-center">
+                <h2 class="text-sageBlack font-aftika font-light text-[16px]">
+                  Past Aides
+                </h2>
+
+                <a
+                  class="font-aftika text-[12px] font-extralight text-sageHeavyBlue"
+                  href=""
+                  >View all</a
+                >
+              </div>
+
+              <div class="flex items-center gap-2 mt-3">
+                <div
+                  class="py-2 px-2 bg-sageMidWhite flex flex-col justify-between gap-5 items-center rounded-lg"
+                >
+                  <img
+                    class="w-[64px] h-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col gap-1 items-center">
+                    <p
+                      class="font-aftika text[16px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img
+                      class="h-[16px] w-[84px]"
+                      src="images/Component 3.svg"
+                      alt=""
+                    />
+                  </div>
+
+                  <span
+                    class="font-aftika font-extralight text-[12px] text-sageHeavyBlue"
+                    >Details</span
+                  >
+                </div>
+                <div
+                  class="py-2 px-2 bg-sageMidWhite flex flex-col justify-between gap-5 items-center rounded-lg"
+                >
+                  <img
+                    class="w-[64px] h-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col gap-1 items-center">
+                    <p
+                      class="font-aftika text[16px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img
+                      class="h-[16px] w-[84px]"
+                      src="images/Component 3.svg"
+                      alt=""
+                    />
+                  </div>
+
+                  <span
+                    class="font-aftika font-extralight text-[12px] text-sageHeavyBlue"
+                    >Details</span
+                  >
+                </div>
+                <div
+                  class="py-2 px-2 bg-sageMidWhite flex flex-col justify-between gap-5 items-center rounded-lg"
+                >
+                  <img
+                    class="w-[64px] h-[64px]"
+                    src="images/Ellipse 1.svg"
+                    alt=""
+                  />
+
+                  <div class="flex flex-col gap-1 items-center">
+                    <p
+                      class="font-aftika text[16px] font-semibold text-sageBlack"
+                    >
+                      Cole Palmer
+                    </p>
+                    <img
+                      class="h-[16px] w-[84px]"
+                      src="images/Component 3.svg"
+                      alt=""
+                    />
+                  </div>
+
+                  <span
+                    class="font-aftika font-extralight text-[12px] text-sageHeavyBlue"
+                    >Details</span
+                  >
+                </div>
+              </div>
+
+              <h2 class="font-aftika font-light mt-2 text-[16px]">
+                My Open Jobs
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
